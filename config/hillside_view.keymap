@@ -280,11 +280,11 @@
         Adjustment {
             label = "ADJUST";
             bindings = <
-  &soft_off    &none   &trans  &trans  &trans  &trans  &bt BT_PRV    &dly_bt BT_CLR 0  &bt BT_NXT    &soft_off
-  &sys_reset   &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4      &trans        &sys_reset
-  &bootloader  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bootloader
+  &soft_off    &none   &trans  &trans  &trans  &trans  &bt BT_PRV    &dly_bt BT_CLR  &bt BT_NXT    &soft_off
+  &sys_reset   &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &sys_reset
+  &bootloader  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bootloader
                        &trans                                        &trans
-  &trans       &to 1   &trans  &trans                  &trans        &trans            &to 0         &trans
+  &trans       &to 1   &trans  &trans                  &trans        &trans          &to 0         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
