@@ -36,8 +36,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <SYM NUM>;
-            then-layer = <ADJ>;
+            if-layers = <2 3>;
+            then-layer = <5>;
         };
     };
 
@@ -184,22 +184,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
-        lswp: left_swp {
-            label = "LSWAP";
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LGUI>, <&mo 2>, <&tog 2>;
-        };
-
-        rswp: right_swap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RIGHT_SWAP";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk RGUI>, <&mo 2>, <&tog 2>;
-        };
-
         dly_bt: dly_bt {
             compatible = "zmk,behavior-hold-tap";
             label = "DLY_BT";
@@ -207,6 +191,16 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <1000>;
+        };
+
+        sk_layer: sk_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SK_LAYER";
+            bindings = <&mo>, <&sk>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
         };
     };
 
@@ -220,7 +214,7 @@
   &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI
   &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B               &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH
                                        &kp SPACE                                                                                                              &kp C_MUTE
-  &lswp            &kp SPACE           &lt_qk SYM BSPC   &sk LEFT_ALT                                                                &sk RIGHT_ALT            &lt_qk NUM DEL         &kp RET                &rswp
+  &none            &lt_qk 3 TAB        &lt_qk 5 SPACE    &sk_layer 2 LSHFT                                                           &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &lt_qk 3 ENTER         &none
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -233,21 +227,8 @@
   &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O
   &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V               &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH
                                        &trans                                                                                                                 &trans
-  &trans           &trans              &trans            &kp LCTRL                                                                   &trans                   &trans                 &trans                 &trans
+  &trans           &trans              &trans            &trans                                                                      &trans                   &trans                 &trans                 &trans
             >;
-        };
-
-        swap_layer {
-            label = "SWAP";
-            bindings = <
-  &ht N0 P           &ht N9 O         &ht N8 I        &ht N7 U    &ht N6 Y  &ht N5 T  &ht N4 R    &ht N3 E         &ht N2 W       &ht N1 Q
-  &kp SEMI           &kp L            &kp K           &kp J       &kp H     &kp G     &kp F       &kp D            &kp S          &kp A
-  &mt_sk RCTRL FSLH  &mt_sk RALT DOT  &kp COMMA       &kp M       &kp N     &kp B     &kp V       &kp C            &mt_sk LALT X  &mt_sk LCTRL Z
-                                      &kp C_MUTE                                                  &kp SPACE
-  &tog SWP           &kp RET          &lt_qk NUM DEL  &sk RSHIFT                      &sk LSHIFT  &lt_qk SYM BSPC  &kp SPACE      &tog 2
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         sym_layer {
@@ -257,7 +238,7 @@
   &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON  &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE
   &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                     &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
                                       &trans                                                                                                                                 &trans
-  &trans            &trans            &trans                &trans                                                                                    &trans                 &trans           &trans             &trans
+  &trans            &trans            &trans                &tog 2                                                                                    &to 2                  &trans           &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_NEXT C_PREV>;
@@ -270,7 +251,7 @@
   &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))  &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS
   &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL              &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS
                         &trans                                                                       &trans
-  &trans     &trans     &trans        &trans                                        &trans           &trans     &trans           &trans
+  &trans     &to 3      &trans        &trans                                        &trans           &trans     &to 3            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp HOME END &inc_dec_kp C_NEXT C_PREV>;
@@ -291,14 +272,14 @@
             sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
         };
 
-        layer_6 {
+        Adjustment {
             label = "ADJUST";
             bindings = <
-  &trans  &trans   &trans  &trans  &trans  &trans  &bt BT_PRV    &dly_bt BT_CLR 0  &bt BT_NXT    &trans
-  &trans  &trans   &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4      &trans        &trans
-  &trans  &trans   &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &trans
-                   &trans                                        &trans
-  &trans  &to CMK  &trans  &trans                  &trans        &trans            &to DEF       &trans
+  &soft_off    &none   &trans  &trans  &trans  &trans  &bt BT_PRV    &dly_bt BT_CLR 0  &bt BT_NXT    &soft_off
+  &sys_reset   &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4      &trans        &sys_reset
+  &bootloader  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bootloader
+                       &trans                                        &trans
+  &trans       &to 1   &trans  &trans                  &trans        &trans            &to 0         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
