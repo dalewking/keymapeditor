@@ -21,11 +21,12 @@
 #endif
 
 #define DEF 0
-#define WIN 1
+#define CMK 1
 #define SWP 2
 #define SYM 3
 #define NUM 4
-#define ADJ 5
+#define NAV 5
+#define ADJ 6
 #define QUICK_TAP_MS 175
 
 &sk {
@@ -48,7 +49,7 @@
 
         caps {
             timeout-ms = <50>;
-            key-positions = <LB5 RB5>;
+            key-positions = <LB5 RB5 35 36>;
             bindings = <&caps_word>;
         };
 
@@ -56,62 +57,82 @@
 
         cb_excl {
             bindings = <&kp EXCL>;
-            key-positions = <1 13>;
+            key-positions = <10 0>;
             timeout-ms = <30>;
         };
 
         cb_at {
             bindings = <&kp AT>;
-            key-positions = <2 14>;
+            key-positions = <1 11>;
             timeout-ms = <30>;
         };
 
         cb_hash {
             bindings = <&kp HASH>;
-            key-positions = <3 15>;
+            key-positions = <2>;
             timeout-ms = <30>;
         };
 
         cb_dllr {
             bindings = <&kp DLLR>;
-            key-positions = <4 16>;
+            key-positions = <3 13>;
             timeout-ms = <30>;
         };
 
         cb_prcnt {
             bindings = <&kp PRCNT>;
-            key-positions = <5 17>;
+            key-positions = <4 14>;
             timeout-ms = <30>;
         };
 
         cb_caret {
             bindings = <&kp CARET>;
-            key-positions = <6 18>;
+            key-positions = <5 15>;
             timeout-ms = <30>;
         };
 
         cb_amps {
             bindings = <&kp AMPS>;
-            key-positions = <7 19>;
+            key-positions = <6 16>;
             timeout-ms = <30>;
         };
 
         cb_mult {
             bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
+            key-positions = <7 17>;
             timeout-ms = <30>;
         };
 
         cb_lparen {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 21>;
+            key-positions = <8 18>;
             timeout-ms = <30>;
         };
 
         cb_rparen {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 22>;
+            key-positions = <9 19>;
             timeout-ms = <30>;
+        };
+
+        cb_esc {
+            bindings = <&kp ESC>;
+            key-positions = <0 1>;
+        };
+
+        cb_tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+
+        cb_bs {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <9 8>;
+        };
+
+        cb_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
         };
     };
 
@@ -189,24 +210,24 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&ht N1 Q        &ht N2 W       &ht N3 E         &ht N4 R      &ht N5 T      &ht N6 Y  &ht N7 U       &ht N8 I        &ht N9 O         &ht N0 P
-&kp A           &kp S          &kp D            &kp F         &kp G         &kp H     &kp J          &kp K           &kp L            &kp SEMI
-&mt_sk LCTRL Z  &mt_sk LALT X  &kp C            &kp V         &kp B         &kp N     &kp M          &kp COMMA       &mt_sk RALT DOT  &mt_sk RCTRL FSLH
-                                              &kp SPACE                                                             &kp C_MUTE
-               &lswp           &kp SPACE      &lt_qk SYM BSPC  &sk LEFT_ALT                          &sk RIGHT_ALT  &lt_qk NUM DEL  &kp RET          &rswp
+  &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                  &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P
+  &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI
+  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B               &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH
+                                       &kp SPACE                                                                                                              &kp C_MUTE
+  &lswp            &kp SPACE           &lt_qk SYM BSPC   &sk LEFT_ALT                                                                &sk RIGHT_ALT            &lt_qk NUM DEL         &kp RET                &rswp
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        winlinux_layer {
-            label = "WINLINUX";
+        colemak_dhrs_layer {
+            label = "COLEMAK";
             bindings = <
-&trans         &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans            &trans
-&trans         &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans            &trans
-&mt_sk LGUI Z  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &mt_sk RGUI FSLH  &trans
-                               &trans                                      &trans
-        &kp LCTRL      &trans  &trans  &trans                      &trans  &trans  &trans  &kp RCTRL
+  &ht N1 Q         &ht N2 W            &ht N3 F          &ht N4 P                &ht N5 B                  &ht N6 J                  &ht N7 L                 &ht N8 U               &ht N9 Y               &ht N0 SQT
+  &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O
+  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V               &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH
+                  &trans                                            &trans
+  &trans  &trans  &trans         &kp LCTRL                  &trans  &trans            &trans  &trans
             >;
         };
 
@@ -226,11 +247,11 @@
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-&kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT      &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR
-&trans    &trans  &trans    &trans    &trans         &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH
-&trans    &trans  &trans    &trans    &trans         &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE
-                          &kp END                                                  &kp C_PP
-        &trans    &trans  &trans    &trans                              &trans     &trans           &trans    &trans
+  &kp EXCL          &kp AT            &kp HASH              &kp DLLR                  &kp PRCNT                     &kp CARET                         &kp AMPS               &kp ASTERISK     &kp LPAR           &kp RPAR
+  &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON  &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE
+  &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                     &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE
+                                      &trans                                                                                                                                 &trans
+  &trans            &trans            &trans                &trans                                                                                    &trans                 &trans           &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_NEXT C_PREV>;
@@ -239,27 +260,40 @@
         num_layer {
             label = "NUMBERS";
             bindings = <
-&ht F1 N1  &ht F2 N2  &ht F3 N3  &ht F4 N4  &ht F5 N5      &ht F6 N6  &ht F7 N7  &ht F8 N8  &ht F9 N9  &ht F10 N0
-&trans     &trans     &trans     &trans     &trans         &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans     &trans     &trans     &trans     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
-                               &trans                                                     &trans
-         &trans     &trans     &trans     &trans                               &trans     &trans     &trans     &trans
+  &ht F1 N1  &ht F2 N2  &ht F3 N3     &ht F4 N4  &ht F5 N5              &ht F6 N6   &ht F7 N7        &ht F8 N8  &ht F9 N9        &ht F10 N0
+  &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))  &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS
+  &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL              &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS
+                        &trans                                                                       &trans
+  &trans     &trans     &trans        &trans                                        &trans           &trans     &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp HOME END &inc_dec_kp C_NEXT C_PREV>;
         };
 
-        adj_layer {
-            label = "ADJUST";
+        nav_layer {
+            label = "Navigation";
             bindings = <
-&rgb_ug RGB_TOG    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI      &out OUT_TOG  &trans    &trans      &trans        &trans
-&rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD      &trans        &trans    &trans      &trans        &trans
-&bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4         &kp C_PREV    &kp C_PP  &kp C_NEXT  &kp C_VOL_UP  &kp C_MUTE
-                                                 &trans                                                                         &trans
-             &ext_power EP_TOG  &to WIN          &trans           &trans                                              &trans    &trans      &to DEF       &trans
+  &kp K_BACK     &kp HOME   &kp UP      &kp END      &kp PG_UP   &kp C_RW               &kp RC(F2)       &kp C_FF    &kp C_VOLUME_UP  &kp RC(F4)
+  &kp K_FORWARD  &kp LEFT   &kp DOWN    &kp RIGHT    &kp PG_DN   &kp RA(RC(RG(RSHFT)))  &kp RSHFT        &kp RCMD    &kp RALT         &kp RCTRL
+  &kp K_UNDO     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_FIND  &kp C_PREV             &ht C_STOP C_PP  &kp C_NEXT  &kp C_VOL_DN     &kp C_MUTE
+                            &trans                                                                       &trans
+  &trans         &trans     &trans      &trans                                          &trans           &trans      &trans           &trans
             >;
 
             // F15 and F14 are brightness controls for macOS
+
+            sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        layer_6 {
+            label = "ADJUST";
+            bindings = <
+  &rgb_ug RGB_TOG    &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &out OUT_TOG  &trans    &trans      &trans        &trans
+  &rgb_ug RGB_EFF    &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &trans        &trans    &trans      &trans        &trans
+  &bt BT_SEL 0       &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &kp C_PREV    &kp C_PP  &kp C_NEXT  &kp C_VOL_UP  &kp C_MUTE
+                                      &trans                                                                     &trans
+  &ext_power EP_TOG  &to CMK            &trans           &trans                                          &trans    &trans      &to DEF       &trans
+            >;
 
             sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
         };
