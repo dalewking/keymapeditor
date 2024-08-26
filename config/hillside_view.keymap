@@ -113,7 +113,7 @@
         };
 
         cb_esc {
-            bindings = <&kp ESC>;
+            bindings = <&gresc>;
             key-positions = <0 1>;
         };
 
@@ -130,6 +130,11 @@
         cb_enter {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
+        };
+
+        cb_qt_del {
+            bindings = <&ht DELETE SQT>;
+            key-positions = <28 29>;
         };
     };
 
