@@ -46,7 +46,7 @@
 
         caps {
             timeout-ms = <50>;
-            key-positions = <35 36>;
+            key-positions = <41 42>;
             bindings = <&caps_word>;
         };
 
@@ -54,87 +54,123 @@
 
         cb_excl {
             bindings = <&kp EXCL>;
-            key-positions = <10 0>;
+            key-positions = <1 13>;
             timeout-ms = <30>;
         };
 
         cb_at {
             bindings = <&kp AT>;
-            key-positions = <1 11>;
+            key-positions = <2 14>;
             timeout-ms = <30>;
         };
 
         cb_hash {
             bindings = <&kp HASH>;
-            key-positions = <2 12>;
+            key-positions = <15 3>;
             timeout-ms = <30>;
         };
 
         cb_dllr {
             bindings = <&kp DLLR>;
-            key-positions = <3 13>;
+            key-positions = <4 16>;
             timeout-ms = <30>;
         };
 
         cb_prcnt {
             bindings = <&kp PRCNT>;
-            key-positions = <4 14>;
+            key-positions = <5 17>;
             timeout-ms = <30>;
         };
 
         cb_caret {
             bindings = <&kp CARET>;
-            key-positions = <5 15>;
+            key-positions = <6 18>;
             timeout-ms = <30>;
         };
 
         cb_amps {
             bindings = <&kp AMPS>;
-            key-positions = <6 16>;
+            key-positions = <7 19>;
             timeout-ms = <30>;
         };
 
         cb_mult {
             bindings = <&kp ASTERISK>;
-            key-positions = <7 17>;
+            key-positions = <8 20>;
             timeout-ms = <30>;
         };
 
         cb_lparen {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <8 18>;
+            key-positions = <9 21>;
             timeout-ms = <30>;
         };
 
         cb_rparen {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <9 19>;
+            key-positions = <10 22>;
             timeout-ms = <30>;
         };
 
         cb_esc {
             bindings = <&gresc>;
-            key-positions = <0 1>;
+            key-positions = <1 2>;
         };
 
         cb_tab {
             bindings = <&kp TAB>;
-            key-positions = <10 11>;
+            key-positions = <13 14>;
         };
 
         cb_bs {
             bindings = <&kp BACKSPACE>;
-            key-positions = <9 8>;
+            key-positions = <10 9>;
         };
 
         cb_enter {
             bindings = <&kp ENTER>;
-            key-positions = <18 19>;
+            key-positions = <22 21>;
         };
 
         cb_qt_del {
             bindings = <&ht DELETE SQT>;
-            key-positions = <28 29>;
+            key-positions = <34 33>;
+        };
+
+        cb_soft_off_right {
+            bindings = <&none>;
+            key-positions = <6 11>;
+            layers = <5>;
+        };
+
+        cb_soft_off_left {
+            bindings = <&none>;
+            key-positions = <0 5>;
+            layers = <5>;
+        };
+
+        cb_reset_right {
+            bindings = <&none>;
+            key-positions = <18 23>;
+            layers = <5>;
+        };
+
+        cb_reset_left {
+            bindings = <&none>;
+            key-positions = <12 17>;
+            layers = <5>;
+        };
+
+        cb_bootloader_right {
+            bindings = <&none>;
+            key-positions = <30 35>;
+            layers = <5>;
+        };
+
+        cb_bootloader_left {
+            bindings = <&none>;
+            key-positions = <24 29>;
+            layers = <5>;
         };
     };
 
@@ -215,11 +251,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&none  &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                  &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P       &none
-&none  &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI        &none
-&none  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B               &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH     &none
-                                       &kp SPACE                                                                                                              &kp C_MUTE
-  &kp BACKSPACE    &lt_qk 3 TAB        &lt_qk 4 SPACE    &sk_layer 2 LSHFT                                                           &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &lt_qk 3 ENTER         &kp DEL
+&gresc       &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P         &kp BACKSPACE
+&kp TAB      &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI  &kp ENTER
+&key_repeat  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH   &kp SQT
+                                                  &kp SPACE                                                                                                                  &kp C_MUTE
+             &kp BACKSPACE    &lt_qk 3 TAB        &lt_qk 4 SPACE    &sk_layer 2 LSHFT                                                               &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &lt_qk 3 ENTER         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -228,22 +264,22 @@
         colemak_dhrs_layer {
             label = "COLEMAK";
             bindings = <
-&none  &ht N1 Q         &ht N2 W            &ht N3 F          &ht N4 P                &ht N5 B                  &ht N6 J                  &ht N7 L                 &ht N8 U               &ht N9 Y               &ht N0 SQT     &none
-&none  &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G  &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O       &none
-&none  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V               &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH     &none
-                                       &trans                                                                                                                 &trans
-  &trans           &trans              &trans            &trans                                                                      &trans                   &trans                 &trans                 &trans
+&gresc       &ht N1 Q         &ht N2 W            &ht N3 F          &ht N4 P                &ht N5 B                      &ht N6 J                  &ht N7 L                 &ht N8 U               &ht N9 Y               &ht N0 SQT      &kp BSPC
+&kp TAB      &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O    &kp ENTER
+&key_repeat  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V                   &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH  &kp APOS
+                                                  &trans                                                                                                                     &trans
+             &trans           &trans              &trans            &trans                                                                          &trans                   &trans                 &trans                 &trans
             >;
         };
 
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-  &none  &kp EXCL          &kp AT            &kp HASH              &kp DLLR                  &kp PRCNT                     &kp CARET                         &kp AMPS               &kp ASTERISK     &kp LPAR           &kp RPAR   &none
-  &none  &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON  &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE   &none
-  &none  &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                     &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp GRAVE  &none
-                                      &trans                                                                                                                                 &trans
-  &trans            &trans            &trans                &tog 2                                                                                    &to 2                  &trans           &trans             &trans
+&gresc       &kp EXCL          &kp AT            &kp HASH              &kp DLLR                  &kp PRCNT                         &kp CARET                         &kp AMPS               &kp ASTERISK     &kp LPAR           &kp RPAR          &kp BSPC
+&kp TAB      &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON      &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE  &kp ENTER
+&key_repeat  &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                         &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp FSLH          &kp APOS
+                                                 &trans                                                                                                                                     &trans
+             &trans            &trans            &trans                &tog 2                                                                                        &to 2                  &trans           &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_NEXT C_PREV>;
@@ -252,11 +288,11 @@
         num_layer {
             label = "NUMBERS";
             bindings = <
-  &none  &ht F1 N1  &ht F2 N2  &ht F3 N3     &ht F4 N4  &ht F5 N5              &ht F6 N6   &ht F7 N7        &ht F8 N8  &ht F9 N9        &ht F10 N0  &none
-  &none  &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))  &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS    &none
-  &none  &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL              &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS   &none
-                        &trans                                                                       &trans
-  &trans     &to 3      &trans        &trans                                        &trans           &trans     &to 3            &trans
+&gresc       &ht F1 N1  &ht F2 N2  &ht F3 N3     &ht F4 N4  &ht F5 N5                  &ht F6 N6   &ht F7 N7        &ht F8 N8  &ht F9 N9        &ht F10 N0                 &kp BSPC
+&kp TAB      &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))      &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS   &kp ENTER
+&key_repeat  &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL                  &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS  &kp APOS
+                                   &trans                                                                           &trans
+             &trans     &to 3      &trans        &trans                                            &trans           &trans     &to 3            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp HOME END &inc_dec_kp C_NEXT C_PREV>;
@@ -265,11 +301,11 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-  &none  &kp K_BACK     &kp HOME   &kp UP      &kp END      &kp PG_UP   &kp C_RW               &kp RC(F2)       &kp C_FF    &kp C_VOLUME_UP  &kp RC(F4)    &none
-  &none  &kp K_FORWARD  &kp LEFT   &kp DOWN    &kp RIGHT    &kp PG_DN   &kp RA(RC(RG(RSHFT)))  &kp RSHFT        &kp RCMD    &kp RALT         &kp RCTRL &none
-  &none  &kp K_UNDO     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_FIND  &kp C_PREV             &ht C_STOP C_PP  &kp C_NEXT  &kp C_VOL_DN     &kp C_MUTE    &none
-                            &trans                                                                       &trans
-  &trans         &trans     &trans      &trans                                          &trans           &trans      &trans           &trans
+&kp ESC      &kp K_BACK     &kp HOME   &kp UP      &kp END      &kp PG_UP       &kp C_RW               &kp RC(F2)       &kp C_FF    &kp C_VOLUME_UP  &kp RC(F4)  &kp BSPC
+&kp TAB      &kp K_FORWARD  &kp LEFT   &kp DOWN    &kp RIGHT    &kp PG_DN       &kp RA(RC(RG(RSHFT)))  &kp RSHFT        &kp RCMD    &kp RALT         &kp RCTRL   &kp ENTER
+&key_repeat  &kp K_UNDO     &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp K_FIND      &kp C_PREV             &ht C_STOP C_PP  &kp C_NEXT  &kp C_VOL_DN     &kp C_MUTE  &kp C_RECORD
+                                       &trans                                                                           &trans
+             &trans         &trans     &trans      &trans                                              &trans           &trans      &trans           &trans
             >;
 
             // F15 and F14 are brightness controls for macOS
@@ -280,11 +316,11 @@
         Adjustment {
             label = "ADJUST";
             bindings = <
-  &none  &soft_off    &none   &trans  &trans  &trans  &trans  &bt BT_PRV    &dly_bt BT_CLR  &bt BT_NXT    &soft_off &none
-  &none  &sys_reset   &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &sys_reset    &none
-  &none  &bootloader  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bootloader   &none
-                       &trans                                        &trans
-  &trans       &to 1   &trans  &trans                  &trans        &trans          &to 0         &trans
+&none  &none   &none   &trans  &trans  &trans      &trans  &bt BT_PRV    &dly_bt BT_CLR  &bt BT_NXT    &none   &none
+&none  &none   &trans  &trans  &trans  &trans      &trans  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &none   &none
+&none  &none   &trans  &trans  &trans  &trans      &trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &none   &none
+                       &trans                                            &trans
+       &trans  &to 1   &trans  &trans                      &trans        &trans          &to 0         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp F15 F14 &inc_dec_kp PG_UP PG_DN>;
