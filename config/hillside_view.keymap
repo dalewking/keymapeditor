@@ -138,37 +138,37 @@
         };
 
         cb_soft_off_right {
-            bindings = <&none>;
+            bindings = <&soft_off>;
             key-positions = <6 11>;
             layers = <5>;
         };
 
         cb_soft_off_left {
-            bindings = <&none>;
+            bindings = <&soft_off>;
             key-positions = <0 5>;
             layers = <5>;
         };
 
         cb_reset_right {
-            bindings = <&none>;
+            bindings = <&sys_reset>;
             key-positions = <18 23>;
             layers = <5>;
         };
 
         cb_reset_left {
-            bindings = <&none>;
+            bindings = <&sys_reset>;
             key-positions = <12 17>;
             layers = <5>;
         };
 
         cb_bootloader_right {
-            bindings = <&none>;
+            bindings = <&bootloader>;
             key-positions = <30 35>;
             layers = <5>;
         };
 
         cb_bootloader_left {
-            bindings = <&none>;
+            bindings = <&bootloader>;
             key-positions = <24 29>;
             layers = <5>;
         };
