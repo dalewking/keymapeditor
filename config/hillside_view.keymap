@@ -113,7 +113,7 @@
         };
 
         cb_esc {
-            bindings = <&gresc>;
+            bindings = <&ht ESC GRAVE>;
             key-positions = <1 2>;
         };
 
@@ -251,11 +251,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&gresc       &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P         &kp BACKSPACE
-&kp TAB      &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI  &kp ENTER
-&key_repeat  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH   &kp SQT
-                                                  &kp SPACE                                                                                                                  &kp C_MUTE
-             &kp BACKSPACE    &lt_qk 3 TAB        &lt_qk 4 SPACE    &sk_layer 2 LSHFT                                                               &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &lt_qk 3 ENTER         &kp DEL
+&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P         &kp BACKSPACE
+&kp TAB           &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI  &kp ENTER
+&key_repeat       &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH   &kp SQT
+                                                       &kp SPACE                                                                                                                  &kp C_MUTE
+                  &kp BACKSPACE    &lt_qk 3 TAB        &lt_qk 4 SPACE    &sk_layer 2 LSHFT                                                               &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &lt_qk 3 ENTER         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -264,22 +264,22 @@
         colemak_dhrs_layer {
             label = "COLEMAK";
             bindings = <
-&gresc       &ht N1 Q         &ht N2 W            &ht N3 F          &ht N4 P                &ht N5 B                      &ht N6 J                  &ht N7 L                 &ht N8 U               &ht N9 Y               &ht N0 SQT      &kp BSPC
-&kp TAB      &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O    &kp ENTER
-&key_repeat  &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V                   &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH  &kp APOS
-                                                  &trans                                                                                                                     &trans
-             &trans           &trans              &trans            &trans                                                                          &trans                   &trans                 &trans                 &trans
+&ht ESC GRAVE  &ht N1 Q         &ht N2 W            &ht N3 F          &ht N4 P                &ht N5 B                      &ht N6 J                  &ht N7 L                 &ht N8 U               &ht N9 Y               &ht N0 SQT      &kp BSPC
+&kp TAB        &hml LCTRL A     &hml LALT S         &hml LCMD R       &hml LSHFT T            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) M  &hmr RSHFT N             &hmr RCMD E            &hmr RALT I            &hmr RCTRL O    &kp ENTER
+&key_repeat    &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS D  &ht MINUS V                   &ht EQUAL K               &ht RIGHT_PARENTHESIS H  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH  &kp APOS
+                                                    &trans                                                                                                                     &trans
+               &trans           &trans              &trans            &trans                                                                          &trans                   &trans                 &trans                 &trans
             >;
         };
 
         sym_layer {
             label = "SYMBOLS";
             bindings = <
-&gresc       &kp EXCL          &kp AT            &kp HASH              &kp DLLR                  &kp PRCNT                         &kp CARET                         &kp AMPS               &kp ASTERISK     &kp LPAR           &kp RPAR          &kp BSPC
-&kp TAB      &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON      &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE  &kp ENTER
-&key_repeat  &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                         &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp FSLH          &kp APOS
-                                                 &trans                                                                                                                                     &trans
-             &trans            &trans            &trans                &tog 2                                                                                        &to 2                  &trans           &trans             &trans
+&ht ESC GRAVE  &kp EXCL          &kp AT            &kp HASH              &kp DLLR                  &kp PRCNT                         &kp CARET                         &kp AMPS               &kp ASTERISK     &kp LPAR           &kp RPAR          &kp BSPC
+&kp TAB        &hml LCTRL TILDE  &hml LALT PLUS    &hml LCMD UNDERSCORE  &hml LSHFT DOUBLE_QUOTES  &hml LA(LC(LG(LSHFT))) COLON      &hmr RA(RC(RG(RSHFT))) SEMICOLON  &hmr RSHFT SQT         &hmr RCMD MINUS  &hmr RALT EQUAL    &hmr RCTRL GRAVE  &kp ENTER
+&key_repeat    &kp BACKSLASH     &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp LEFT_PARENTHESIS      &kp MINUS                         &kp EQUAL                         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp FSLH          &kp APOS
+                                                   &trans                                                                                                                                     &trans
+               &trans            &trans            &trans                &tog 2                                                                                        &to 2                  &trans           &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp C_NEXT C_PREV>;
@@ -288,11 +288,11 @@
         num_layer {
             label = "NUMBERS";
             bindings = <
-&gresc       &ht F1 N1  &ht F2 N2  &ht F3 N3     &ht F4 N4  &ht F5 N5                  &ht F6 N6   &ht F7 N7        &ht F8 N8  &ht F9 N9        &ht F10 N0                 &kp BSPC
-&kp TAB      &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))      &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS   &kp ENTER
-&key_repeat  &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL                  &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS  &kp APOS
-                                   &trans                                                                           &trans
-             &trans     &to 3      &trans        &trans                                            &trans           &trans     &to 3            &trans
+&ht ESC GRAVE  &ht F1 N1  &ht F2 N2  &ht F3 N3     &ht F4 N4  &ht F5 N5                  &ht F6 N6   &ht F7 N7        &ht F8 N8  &ht F9 N9        &ht F10 N0                 &kp BSPC
+&kp TAB        &kp LCTRL  &kp LALT   &kp LCMD      &kp LSHFT  &kp LA(LC(LG(LSHFT)))      &kp PERIOD  &ht F4 NUMBER_4  &ht F5 N5  &ht F6 NUMBER_6  &ht F11 LEFT_PARENTHESIS   &kp ENTER
+&key_repeat    &kp PLUS   &kp MINUS  &kp ASTERISK  &kp SLASH  &kp EQUAL                  &kp N0      &ht F1 N1        &ht F2 N2  &ht F3 N3        &ht F12 RIGHT_PARENTHESIS  &kp APOS
+                                     &trans                                                                           &trans
+               &trans     &to 3      &trans        &trans                                            &trans           &trans     &to 3            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp HOME END &inc_dec_kp C_NEXT C_PREV>;
