@@ -312,11 +312,11 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-&kp ESC      &kp K_BACK     &kp HOME   &kp UP     &kp END    &kp PG_UP      &kp C_RW               &kp RC(F2)       &kp C_FF    &kp C_VOLUME_UP  &kp RC(F4)  &kp BSPC
-&kp TAB      &kp K_FORWARD  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN      &kp RA(RC(RG(RSHFT)))  &kp RSHFT        &kp RCMD    &kp RALT         &kp RCTRL   &kp ENTER
-&key_repeat  &kp LG(Z)      &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(F)      &kp C_PREV             &ht C_STOP C_PP  &kp C_NEXT  &kp C_VOL_DN     &kp C_MUTE  &kp C_RECORD
-                                       &trans                                                                       &trans
-             &trans         &trans     &trans     &trans                                           &trans           &trans      &trans           &trans
+&kp ESC      &kp LG(LEFT_BRACKET)   &kp HOME   &kp UP     &kp END    &kp PG_UP      &kp C_RW               &kp RC(F2)       &kp C_FF    &kp C_VOLUME_UP  &kp RC(F4)  &kp BSPC
+&kp TAB      &kp LG(RIGHT_BRACKET)  &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN      &kp RA(RC(RG(RSHFT)))  &kp RSHFT        &kp RCMD    &kp RALT         &kp RCTRL   &kp ENTER
+&key_repeat  &kp LG(Z)              &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(F)      &kp C_PREV             &ht C_STOP C_PP  &kp C_NEXT  &kp C_VOL_DN     &kp C_MUTE  &kp C_RECORD
+                                               &trans                                                                       &trans
+             &trans                 &trans     &trans     &trans                                           &trans           &trans      &trans           &trans
             >;
 
             // F15 and F14 are brightness controls for macOS
