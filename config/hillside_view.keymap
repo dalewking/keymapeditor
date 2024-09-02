@@ -24,7 +24,7 @@
 #define NUM 4
 #define NAV 5
 #define ADJ 6
-#define QUICK_TAP_MS 175
+#define QUICK_TAP_MS 300
 
 &sk {
     release-after-ms = <600>;
@@ -55,122 +55,133 @@
         cb_excl {
             bindings = <&kp EXCL>;
             key-positions = <1 13>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_at {
             bindings = <&kp AT>;
             key-positions = <2 14>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_hash {
             bindings = <&kp HASH>;
             key-positions = <15 3>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_dllr {
             bindings = <&kp DLLR>;
             key-positions = <4 16>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_prcnt {
             bindings = <&kp PRCNT>;
             key-positions = <5 17>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_caret {
             bindings = <&kp CARET>;
             key-positions = <6 18>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_amps {
             bindings = <&kp AMPS>;
             key-positions = <7 19>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_mult {
             bindings = <&kp ASTERISK>;
             key-positions = <8 20>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_lparen {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <9 21>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_rparen {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <10 22>;
-            timeout-ms = <30>;
+            timeout-ms = <100>;
         };
 
         cb_esc {
             bindings = <&ht ESC GRAVE>;
             key-positions = <1 2>;
+            timeout-ms = <100>;
         };
 
         cb_tab {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
+            timeout-ms = <100>;
         };
 
         cb_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <10 9>;
+            timeout-ms = <100>;
         };
 
         cb_enter {
             bindings = <&kp ENTER>;
             key-positions = <22 21>;
+            timeout-ms = <100>;
         };
 
         cb_qt_del {
             bindings = <&ht DELETE SQT>;
             key-positions = <34 33>;
+            timeout-ms = <100>;
         };
 
         cb_soft_off_right {
             bindings = <&soft_off>;
             key-positions = <6 11>;
             layers = <5>;
+            timeout-ms = <100>;
         };
 
         cb_soft_off_left {
             bindings = <&soft_off>;
             key-positions = <0 5>;
             layers = <5>;
+            timeout-ms = <100>;
         };
 
         cb_reset_right {
             bindings = <&sys_reset>;
             key-positions = <18 23>;
             layers = <5>;
+            timeout-ms = <100>;
         };
 
         cb_reset_left {
             bindings = <&sys_reset>;
             key-positions = <12 17>;
             layers = <5>;
+            timeout-ms = <100>;
         };
 
         cb_bootloader_right {
             bindings = <&bootloader>;
             key-positions = <30 35>;
             layers = <5>;
+            timeout-ms = <100>;
         };
 
         cb_bootloader_left {
             bindings = <&bootloader>;
             key-positions = <24 29>;
             layers = <5>;
+            timeout-ms = <100>;
         };
     };
 
