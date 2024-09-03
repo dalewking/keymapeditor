@@ -166,7 +166,7 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <300>;
-            hold-trigger-key-positions = <39 40 41 13 14 15 42 43 44 45 38 30 7 8 9 10 11 19 20 21 22 23 31 32 33 34 35 6 18 16>;
+            hold-trigger-key-positions = <13 14 15 42 43 44 45 30 7 8 9 10 11 19 20 21 22 23 31 32 33 34 35 6 18 16 41 40 39 38>;
             flavor = "balanced";
         };
 
@@ -177,7 +177,7 @@
             bindings = <&kp>, <&kp>;
 
             tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 38 19 20 21 22>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 38 19 20 21 22 39 40 41 42 43 45 44>;
             flavor = "balanced";
         };
 
