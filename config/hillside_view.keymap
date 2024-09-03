@@ -52,94 +52,34 @@
 
         // symbols
 
-        cb_excl {
-            bindings = <&kp EXCL>;
-            key-positions = <1 13>;
-            timeout-ms = <100>;
-        };
-
-        cb_at {
-            bindings = <&kp AT>;
-            key-positions = <2 14>;
-            timeout-ms = <100>;
-        };
-
-        cb_hash {
-            bindings = <&kp HASH>;
-            key-positions = <15 3>;
-            timeout-ms = <100>;
-        };
-
-        cb_dllr {
-            bindings = <&kp DLLR>;
-            key-positions = <4 16>;
-            timeout-ms = <100>;
-        };
-
-        cb_prcnt {
-            bindings = <&kp PRCNT>;
-            key-positions = <5 17>;
-            timeout-ms = <100>;
-        };
-
-        cb_caret {
-            bindings = <&kp CARET>;
-            key-positions = <6 18>;
-            timeout-ms = <100>;
-        };
-
-        cb_amps {
-            bindings = <&kp AMPS>;
-            key-positions = <7 19>;
-            timeout-ms = <100>;
-        };
-
-        cb_mult {
-            bindings = <&kp ASTERISK>;
-            key-positions = <8 20>;
-            timeout-ms = <100>;
-        };
-
-        cb_lparen {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <9 21>;
-            timeout-ms = <100>;
-        };
-
-        cb_rparen {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <10 22>;
-            timeout-ms = <100>;
-        };
-
         cb_esc {
             bindings = <&ht ESC GRAVE>;
             key-positions = <1 2>;
-            timeout-ms = <100>;
+            timeout-ms = <300>;
         };
 
         cb_tab {
             bindings = <&kp TAB>;
             key-positions = <13 14>;
-            timeout-ms = <100>;
+            timeout-ms = <300>;
         };
 
         cb_bs {
             bindings = <&kp BACKSPACE>;
             key-positions = <10 9>;
-            timeout-ms = <100>;
+            timeout-ms = <300>;
         };
 
         cb_enter {
             bindings = <&kp ENTER>;
             key-positions = <22 21>;
-            timeout-ms = <100>;
+            timeout-ms = <300>;
         };
 
         cb_qt_del {
             bindings = <&ht DELETE SQT>;
             key-positions = <34 33>;
-            timeout-ms = <100>;
+            timeout-ms = <300>;
         };
 
         cb_soft_off_right {
@@ -210,10 +150,13 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP";
             #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            quick_tap_ms = <200>;
+            tapping_term_ms = <300>;
+            quick_tap_ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <300>;
+            quick-tap-ms = <300>;
         };
 
         hml: homewrow_mods_left {
@@ -222,7 +165,7 @@
             label = "HOMEROW_MODS_LEFT_HAND";
             bindings = <&kp>, <&kp>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
         };
 
@@ -232,7 +175,7 @@
             label = "HOMEROW_MODS_RIGHT_HAND";
             bindings = <&kp>, <&kp>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
 
