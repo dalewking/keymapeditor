@@ -131,8 +131,8 @@
             label = "LAYER_TOGGLE_QUICK";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <QUICK_TAP_MS>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <100>;
             bindings = <&mo>, <&kp>;
         };
 
