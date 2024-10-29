@@ -46,7 +46,7 @@
 
         caps {
             timeout-ms = <50>;
-            key-positions = <41 42>;
+            key-positions = <40 43>;
             bindings = <&caps_word>;
         };
 
@@ -55,30 +55,6 @@
         cb_esc {
             bindings = <&ht ESC GRAVE>;
             key-positions = <1 2>;
-            timeout-ms = <300>;
-        };
-
-        cb_tab {
-            bindings = <&kp TAB>;
-            key-positions = <13 14>;
-            timeout-ms = <300>;
-        };
-
-        cb_bs {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <10 9>;
-            timeout-ms = <300>;
-        };
-
-        cb_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <22 21>;
-            timeout-ms = <300>;
-        };
-
-        cb_qt_del {
-            bindings = <&ht DELETE SQT>;
-            key-positions = <34 33>;
             timeout-ms = <300>;
         };
 
@@ -207,11 +183,11 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W            &ht N3 E          &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P         &kp BACKSPACE
-&kp TAB           &hml LCTRL A     &hml LALT S         &hml LCMD D       &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI  &kp ENTER
-&key_repeat       &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C  &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH   &kp SQT
-                                                       &kp SPACE                                                                                                                  &kp C_MUTE
-                  &kp BACKSPACE    &lt_qk 4 SPACE      &sk_layer 2 LSHFT &lt_qk 3 TAB                                                                    &lt_qk 3 ENTER           &sk_layer 2 RSHFT        &lt_qk 4 SPACE         &kp DEL
+&ht ESCAPE GRAVE  &ht N1 Q         &ht N2 W            &ht N3 E           &ht N4 R                &ht N5 T                      &ht N6 Y                  &ht N7 U                 &ht N8 I               &ht N9 O               &ht N0 P         &kp BACKSPACE
+&kp TAB           &hml LCTRL A     &hml LALT S         &hml LCMD D        &hml LSHFT F            &hml LA(LC(LG(LSHFT))) G      &hmr RA(RC(RG(RSHFT))) H  &hmr RSHFT J             &hmr RCMD K            &hmr RALT L            &hmr RCTRL SEMI  &kp ENTER
+&key_repeat       &ht BACKSLASH Z  &ht LEFT_BRACKET X  &ht LEFT_BRACE C   &ht LEFT_PARENTHESIS V  &ht MINUS B                   &ht EQUAL N               &ht RIGHT_PARENTHESIS M  &ht RIGHT_BRACE COMMA  &ht RIGHT_BRACKET DOT  &ht GRAVE FSLH   &kp SQT
+                                                       &kp SPACE                                                                                                                   &kp C_MUTE
+                  &kp BACKSPACE    &lt_qk 4 SPACE      &sk_layer 2 LSHFT  &lt_qk 3 TAB                                                                    &lt_qk 3 ENTER           &sk_layer 2 RSHFT      &lt_qk 4 SPACE         &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
